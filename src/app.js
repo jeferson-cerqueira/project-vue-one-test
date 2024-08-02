@@ -1,10 +1,17 @@
 const MYPERSON = {
     data() {
         return {
-            name: "Jeferson",
+            name: "",
             age: "22",
-            sex: "Men"
+            input_name: ""
         };
+    },
+    methods: {
+        submitForm(e) {
+            e.preventDefault(); 
+            console.log("this.input_name"); 
+            this.name = this.input_name;
+        }
     }
 };
 
